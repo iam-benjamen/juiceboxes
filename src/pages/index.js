@@ -32,11 +32,11 @@ export default function Home() {
           // alignSelf={"flex-start"}
           borderRadius={"5px"}
           bg="#577561"
-          w="35%"
+          w="38%"
           px="2rem"
           pt="2rem"
           pb="10rem"
-          mr={"20rem"}
+          mr={"22rem"}
           position={"relative"}
         >
           <Text
@@ -58,15 +58,18 @@ export default function Home() {
               as={Link}
               href="https://lifestyle.live/"
               isExternal
-              _hover={{textDecoration:"none"}}
+              _hover={{ textDecoration: "none" }}
             >
               Shop Now!
             </Button>
             <Button
-              _hover={{ transform: "scale(1.1)" }}
               h={"max-content"}
               py=".4rem"
               color={"#1e8f2b"}
+              as={Link}
+              isExternal
+              _hover={{ textDecoration: "none", transform: "scale(1.1)" }}
+              href="http://www.cannastats.com/"
             >
               Earn CannaCoins
             </Button>
@@ -75,7 +78,7 @@ export default function Home() {
 
         <Box
           position={"absolute"}
-          bottom="5%"
+          bottom="3%"
           flexDir={{ base: "column", md: "row" }}
           display={"flex"}
           gap={"1.5rem"}
@@ -85,7 +88,7 @@ export default function Home() {
         >
           <Box
             cursor={"pointer"}
-            _hover={{ transform: "scale(1.01)" }}
+            _hover={{ transform: "scale(1.05)" }}
             as={Link}
             isExternal
             href="https://lifestyle.live/collections/all"
@@ -95,7 +98,7 @@ export default function Home() {
 
           <Box
             cursor={"pointer"}
-            _hover={{ transform: "scale(1.01)" }}
+            _hover={{ transform: "scale(1.05)" }}
             as={Link}
             isExternal
             href="https://lifestyle.live/collections/all"
@@ -105,7 +108,7 @@ export default function Home() {
 
           <Box
             cursor={"pointer"}
-            _hover={{ transform: "scale(1.01)" }}
+            _hover={{ transform: "scale(1.05)" }}
             as={Link}
             isExternal
             href="https://lifestyle.live/collections/all"
@@ -114,7 +117,7 @@ export default function Home() {
           </Box>
           <Box
             cursor={"pointer"}
-            _hover={{ transform: "scale(1.01)" }}
+            _hover={{ transform: "scale(1.05)" }}
             as={Link}
             isExternal
             href="https://lifestyle.live/collections/all"
