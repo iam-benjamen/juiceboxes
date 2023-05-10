@@ -2,6 +2,8 @@ import { Box, HStack, Text, Button } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Head from "next/head";
+import characters from "../../public/CHARACTERS--.png";
+
 import image1 from "../../public/1.png";
 import image2 from "../../public/2.png";
 import image3 from "../../public/3.png";
@@ -24,19 +26,20 @@ export default function Home() {
         h="80vh"
       >
         <Box
-          alignSelf={"flex-start"}
+          // alignSelf={"flex-start"}
           borderRadius={"5px"}
           bg="#577561"
           w="35%"
           px="2rem"
           pt="2rem"
           pb="10rem"
-          ml={"20rem"}
+          mr={"20rem"}
+          position={"relative"}
         >
           <Text
+            fontFamily={"poppins"}
             color={"white"}
             pb="1.5rem"
-            fontFamily={"poppins"}
             fontWeight={600}
           >
             Welcome LIVE DISTILLATE <br /> Catridge User
@@ -44,7 +47,6 @@ export default function Home() {
 
           <HStack justifyContent={"space-between"}>
             <Button
-              // _hover={{ transform: "scale(1.1)" }}
               h={"max-content"}
               py=".4rem"
               color={"#1e8f2b"}
@@ -63,7 +65,16 @@ export default function Home() {
           </HStack>
         </Box>
 
-        <HStack zIndex={99} pr="10rem" w={"65%"} mt="-8rem" gap="1.5rem">
+        <Box
+          position={"absolute"}
+          bottom="5%"
+          flexDir={{ base: "column", md: "row" }}
+          display={"flex"}
+          gap={"1.5rem"}
+          zIndex={99}
+          pr={{base:"0rem",md:"10rem"}}
+          w={"65%"}
+        >
           <Box cursor={"pointer"}>
             <Image src={image1} alt="image 1" />
           </Box>
@@ -78,7 +89,17 @@ export default function Home() {
           <Box cursor={"pointer"}>
             <Image src={image4} alt="image 1" />
           </Box>
-        </HStack>
+        </Box>
+
+        <Box
+          display={{ base: "none", lg: "block" }}
+          position={"absolute"}
+          right={"0rem"}
+          top={"1rem"}
+          maxW={"45%"}
+        >
+          <Image src={characters} alt="character" />
+        </Box>
       </Box>
     </>
   );
