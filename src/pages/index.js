@@ -1,4 +1,4 @@
-import { Box, HStack, Text, Button } from "@chakra-ui/react";
+import { Box, HStack, Text, Button, Link } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Head from "next/head";
@@ -8,8 +8,11 @@ import image1 from "../../public/1.png";
 import image2 from "../../public/2.png";
 import image3 from "../../public/3.png";
 import image4 from "../../public/4.png";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -41,6 +44,7 @@ export default function Home() {
             color={"white"}
             pb="1.5rem"
             fontWeight={600}
+            fontSize={"1.5rem"}
           >
             Welcome LIVE DISTILLATE <br /> Catridge User
           </Text>
@@ -51,6 +55,10 @@ export default function Home() {
               py=".4rem"
               color={"#1e8f2b"}
               className="shop_now"
+              as={Link}
+              href="https://lifestyle.live/"
+              isExternal
+              _hover={{textDecoration:"none"}}
             >
               Shop Now!
             </Button>
@@ -72,21 +80,45 @@ export default function Home() {
           display={"flex"}
           gap={"1.5rem"}
           zIndex={99}
-          pr={{base:"0rem",md:"10rem"}}
+          pr={{ base: "0rem", md: "9rem" }}
           w={"65%"}
         >
-          <Box cursor={"pointer"}>
+          <Box
+            cursor={"pointer"}
+            _hover={{ transform: "scale(1.01)" }}
+            as={Link}
+            isExternal
+            href="https://lifestyle.live/collections/all"
+          >
             <Image src={image1} alt="image 1" />
           </Box>
 
-          <Box cursor={"pointer"}>
+          <Box
+            cursor={"pointer"}
+            _hover={{ transform: "scale(1.01)" }}
+            as={Link}
+            isExternal
+            href="https://lifestyle.live/collections/all"
+          >
             <Image src={image2} alt="image 1" />
           </Box>
 
-          <Box cursor={"pointer"}>
+          <Box
+            cursor={"pointer"}
+            _hover={{ transform: "scale(1.01)" }}
+            as={Link}
+            isExternal
+            href="https://lifestyle.live/collections/all"
+          >
             <Image src={image3} alt="image 1" />
           </Box>
-          <Box cursor={"pointer"}>
+          <Box
+            cursor={"pointer"}
+            _hover={{ transform: "scale(1.01)" }}
+            as={Link}
+            isExternal
+            href="https://lifestyle.live/collections/all"
+          >
             <Image src={image4} alt="image 1" />
           </Box>
         </Box>
